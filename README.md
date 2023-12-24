@@ -34,3 +34,37 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- export default function Page() {
+  const { data: session, status, update } = useSession()
+
+  if (status === "authenticated") {
+    return (
+      <>
+        <p>Signed in as {session.user.name}</p>
+
+        {/* Update the value by sending it to the backend. */}
+        <button onClick={() => update({ name: "John Doe" })}>Edit name</button>
+        {/*
+         * Only trigger a session update, assuming you already updated the value server-side.
+         * All `useSession().data` references will be updated.
+         */}
+        <button onClick={() => update()}>Edit name</button>
+      </>
+    )
+  }
+
+  return <a href="/api/auth/signin">Sign in</a>
+} -->

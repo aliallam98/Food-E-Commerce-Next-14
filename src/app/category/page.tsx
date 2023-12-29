@@ -21,6 +21,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 
+
 const formSchema = z.object({
   title: z.string().min(2).max(50),
   image: z.any().refine((image) => image?.size > 0, "Image Is Required"),
@@ -51,8 +52,8 @@ import CategoryModel from "./CreateCategoryModel";
 
 const CategoryPage =  () => {
   const dispatch = useDispatch()
-  const Categories = useSelector((state: RootState) => state.category.categories)
-  console.log(Categories);
+  const categories = useSelector((state: RootState) => state.category.categories)
+  console.log(categories);
   
 
   const form = useForm<z.infer<typeof formSchema>>({
@@ -79,7 +80,7 @@ const CategoryPage =  () => {
           <CategoryModel/>
         </div>
         <div>
-          <DataTable columns={columns} data={Categories} />
+          <DataTable columns={columns} data={categories} />
         </div>
       </div>
     </section>

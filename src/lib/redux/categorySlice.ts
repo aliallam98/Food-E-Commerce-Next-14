@@ -1,6 +1,5 @@
 "use client"
 
-import { getAllCategories } from '@/libs/actions'
 import { createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
 
